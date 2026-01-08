@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+    height: 70vh;
+   
+    background:linear-gradient(rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)), url("../images/design-background.jpg");
+    color: #fff;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: 100% auto;
+    background-position: center top;
+}
+.hero-content {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #fff;
+    
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+.logo-box img {
+    height: 32px;        /* exact visual size */
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+.m1{
+    padding: 50px;
+}
+.t1{
+    width: 100%;
+    text-align: center;
+}
+.t1 p{
+    font-size: 27px;
+}
+
+/* GRID */
+
+ 
+
+/* TITLE */
+.card-title {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+/* HOVER EFFECT */
+.d1{
+    margin: 50px 0 0 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.d1 div{
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3), 0 1px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.d1 div img{
+    display: block;
+    width: inherit;
+    transition: .5s;
+}
+.d1 div:hover img{
+    transform: scale(1.05);
+}
+.d1 div h2{
+    margin: 10px 0 10px 0;
+    text-align: center;
+    font-size: 35px;
+}
+
+
+
+.d2{
+    margin: 50px 0 0 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.d2 div{
+    width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.d2 div img{
+    display: block;
+    width: inherit;
+}
+.d2 div h2{
+    margin: 70px 0 10px 0;
+    font-size: 40px;
+}
+.d2 div p{
+    margin: 10px 0 10px 0;
+    font-size: 25px;
+}
+.d2 div a{
+    text-decoration: none;
+}
+ .final-cta {
+    position: relative;
+    height: 400px;
+    padding: 80px 60px;
+    text-align: center;
+    background: url("../images/bk.jpg") center/cover no-repeat;
+}
+
+/* Light overlay so text is visible */
+.final-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.65);
+    z-index: 1;
+}
+
+/* Heading text */
+.final-cta h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #000;
+    position: relative;
+    z-index: 2;
+}
+
+/* Button */
+.final-cta .btn {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Dark button style */
+/* ================= GET STARTED BUTTON ================= */
+
+.final-cta .btn.dark {
+    background: #fff;                 /* white background */
+    color: #000;                      /* black text */
+    border: 2px solid #eb595f;        /* red border */
+    padding: 14px 36px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 40px;              /* pill shape */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.final-cta .btn.dark:hover {
+    background: #eb595f;              /* red fill */
+    color: #fff;                      /* white text */
+}
+
+.step-numbers .step {
+    transition: background 0.4s ease, transform 0.4s ease, color 0.4s ease;
+}
+
+.step-numbers .step.active {
+    background: rgb(236, 74, 74);
+    color: #fff;
+    transform: scale(1.15);
+}
+/* FOOTER BOTTOM */
+
+
+
+.footer {
+    background: #000;
+    color: #ccc;
+    margin-top: 80px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    position: relative;
+}
+
+.footer-col h4 {
+    color: #fff;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Links (fix blue/purple issue) */
+.footer-col a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+/* Brand logo */
+.logo {
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Social icons */
+.social-icons {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+
+/* Bottom bar */
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #222;
+    font-size: 13px;
+    color: #aaa;
+}

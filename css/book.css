@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+    height: 100vh;
+    background: 
+    url("../images/book-background.jpg") center/cover no-repeat;
+    color: #fff;
+    position: relative;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+
+.logo-box img {
+    height: 32px;        /* exact visual size */
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+/* Overlay */
+/* CONSULTATION SECTION */
+/* CONSULTATION SECTION */
+/* CONSULT SECTION */
+.consult-section{
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 90px;
+}
+
+/* MAIN BOX */
+.consult-box{
+    width: 360px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+}
+
+/* TOP TITLE */
+.talk-title{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+/* FORM INPUTS */
+.consult-form input,
+.consult-form select{
+    width: 100%;
+    padding: 12px 8px;
+    margin-bottom: 18px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 14px;
+    outline: none;
+    
+}
+
+/* CHECKBOX */
+.whatsapp-row{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 18px;
+}
+.whatsapp-row input{
+    margin: 0px;
+    width: 14px;
+    height: 14px;
+}
+
+/* BUTTON */
+.consult-form button{
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid #d4a35f;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+.consult-form button:hover{
+    background: #d4a35f;
+}
+
+/* BOTTOM TEXT */
+.consult-text{
+    margin-top: 25px;
+}
+
+.consult-text h2{
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.consult-text p{
+    font-size: 16px;
+    color: black;
+    line-height: 1.6;
+}
+
+/* SCROLL UP ANIMATION */
+.reveal{
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.8s ease;
+}
+
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px){
+    .consult-section{
+    height: calc(100vh - 100px); /* leaves space for navbar */
+    display: flex;
+    justify-content: center;   /* horizontal center */
+    align-items: center;       /* vertical center */
+}
+}
+   .consult-box{
+    width: 360px;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 30px;
+    border-radius: 10px;
+}
+@keyframes floatForm {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+.consult-box{
+    animation: floatForm 6s ease-in-out infinite;
+}
+.consult-form input:focus,
+.consult-form select:focus{
+    border-bottom: 2px solid #d4a35f;
+}
+/* ROOMS SECTION */
+/* SECTION */
+
+
+
+.m2{
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+
+.t2{
+    width: 1175px;
+    margin: auto;
+}
+.t2 h1{
+    font-size: 45px;
+}
+.t2 p{
+    font-size: 25px;
+}
+.d2{
+    width: 1200px;
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.d2 div{
+    text-align: center;
+    width: 375px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+.d2 img{
+    filter: brightness(80%);
+    width: inherit;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.d2 h3{
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+}
+.d2 img:hover{
+    transform: scale(1.1);
+}
+.d2 img:hover h3{
+    color: #eb595f;
+}
+/* ================= FAQ SECTION ================= */
+/* ================= FAQ SECTION ================= */
+
+
+
+/* FAQ SECTION */
+/* ================= FAQ SECTION ================= */
+
+/* ================= FAQ SECTION ================= */
+
+.faq-section {
+    padding: 20px 0 60px;
+    background: #fff;
+}
+
+/* FAQ heading */
+.faq-section h2 {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+    font-size: 32px;        /* slightly bigger heading */
+    font-weight: 600;
+    color: #000;
+}
+
+/* Center FAQ content */
+.faq-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Each FAQ item */
+.faq-item {
+    margin-bottom: 18px;   /* more gap between cards */
+}
+
+/* Hide checkbox */
+.faq-item input {
+    display: none;
+}
+
+/* QUESTION CARD (MAKE IT LARGE) */
+.faq-item label {
+    display: block;
+    background: #ffd6d6;
+    padding: 32px 34px;    /* 🔥 BIG HEIGHT */
+    font-size: 20px;      /* 🔥 BIG TEXT */
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
+    border-radius: 10px;  /* smoother, card-like */
+    position: relative;
+}
+
+/* Plus icon (bigger) */
+.faq-item label::after {
+    content: "+";
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 26px;      /* bigger icon */
+    font-weight: bold;
+}
+
+/* Minus when open */
+.faq-item input:checked + label::after {
+    content: "−";
+}
+
+/* ANSWER */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #fff;
+    padding: 0 34px;
+    font-size: 17px;      /* bigger answer text */
+    color: #555;
+    line-height: 1.8;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+/* Show answer */
+.faq-item input:checked ~ .faq-answer {
+    max-height: 300px;
+    padding: 22px 34px 26px;
+}
+/* ================= FINAL CTA SECTION ================= */
+
+.final-cta {
+    position: relative;
+    height: 400px;
+    padding: 80px 60px;
+    text-align: center;
+    background: url("../images/bk.jpg") center/cover no-repeat;
+}
+
+/* Light overlay so text is visible */
+.final-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.65);
+    z-index: 1;
+}
+
+/* Heading text */
+.final-cta h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #000;
+    position: relative;
+    z-index: 2;
+}
+
+/* Button */
+.final-cta .btn {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Dark button style */
+/* ================= GET STARTED BUTTON ================= */
+
+.final-cta .btn.dark {
+    background: #fff;                 /* white background */
+    color: #000;                      /* black text */
+    border: 2px solid #eb595f;        /* red border */
+    padding: 14px 36px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 40px;              /* pill shape */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.final-cta .btn.dark:hover {
+    background: #eb595f;              /* red fill */
+    color: #fff;                      /* white text */
+}
+
+
+/* FOOTER BOTTOM */
+.footer {
+    background: #000;
+    color: #ccc;
+    margin-top: 80px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    position: relative;
+}
+
+.footer-col h4 {
+    color: #fff;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Links (fix blue/purple issue) */
+.footer-col a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+/* Brand logo */
+.logo {
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Social icons */
+.social-icons {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+
+/* Bottom bar */
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #222;
+    font-size: 13px;
+    color: #aaa;
+}

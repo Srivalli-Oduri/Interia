@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)),
+    url("../images/visit-background.jpg") center/cover no-repeat;
+    color: #fff;
+    position: relative;
+    
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+
+.logo-box img {
+    height: 32px;        /* exact visual size */
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color:#fff;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+
+.hero-content {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #fff;
+    
+}
+.m1{
+    padding: 50px;
+}
+.t1{
+    text-align: center;
+}
+.t1 h1{
+    font-size: 45px;
+    margin: 0 0 15px 0;
+}
+.t1 p{
+    font-size: 25px;
+}
+.d1{
+    margin: 100px 25px 25px 25px;
+    display: flex;
+    justify-content: space-around;
+}
+.d1 div{
+    width: 525px;
+    height: 295.8px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.d1 div img{
+    border-radius: 10px;
+    height: inherit;
+    width: inherit;
+    display: block;
+    transition: .5s;
+}
+.d1 div img:hover{
+    transform: scale(1.1);
+}
+.d1 div h1{
+    margin: 70px 0 10px 0;
+    font-size: 40px;
+}
+.d1 div p{
+    margin: 10px 0 5px 0;
+    font-size: 25px;
+}
+.m3{
+    padding: 25px 50px 50px 50px;
+    /* margin: 75px 0 0 0; */
+}
+.t3{
+    width: 100%;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+.t3 h1{  
+    font-size: 45px;
+}
+.t3 p{
+    font-size: 25px;
+}
+.d3{
+    text-align: center;
+}
+
+
+
+
+
+.d4{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.b{
+    width: 600px;
+    margin: 100px 0 0 0;
+}
+.b h2{
+   font-size: 40px;
+   text-align: left;
+   margin: 25px 0 10px 0;
+}
+.b p{
+   font-size: 20px;
+   text-align: left;
+}
+
+.slider{
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    width: 600px;
+    height: 375px;
+    border-radius: 10px;
+    /* border: 2px solid #eb595f; */
+    overflow: hidden;
+}
+.slide{
+width: 600px;
+height: 375px;
+display: flex;
+}
+.slide input{
+display: none;
+}
+.imgs{
+transition: 2s;
+}
+.imgs img{
+width: 600px;
+height: 375px;
+}
+
+/* css for man slide */
+.nav_man{
+color: #eb595f;
+position: absolute;
+width: 600px;
+margin-top: 337.5px;
+display: flex;
+justify-content: center;
+}
+.man_btn{
+border: 2px solid #eb595f;
+padding: 5px;
+border-radius: 10px;
+cursor: pointer;
+transition: 1s;
+}
+.man_btn:not(:last-child){
+margin-right: 40px;
+}
+.man_btn:hover{
+background: #eb595f;
+}
+#radio1:checked ~ .f{
+margin-left: 0;
+}
+#radio2:checked ~ .f{
+margin-left: -600px;
+}
+#radio3:checked ~ .f{
+margin-left: -1200px;
+}
+#radio4:checked ~ .f{
+margin-left: -1800px;
+}
+#radio5:checked ~ .f{
+margin-left: -2400px;
+}
+#radio6:checked ~ .f{
+margin-left: -3000px;
+}
+
+/* automatic navigation */
+
+.nav_auto{
+position: absolute;
+display: flex;
+width: 600px;
+justify-content: center;
+margin-top: 337.5px;
+}
+.nav_auto div{
+border: 2px solid #eb595f;
+padding: 5px;
+border-radius: 10px;
+transition: 1s;
+}
+.nav_auto div:not(:last-child){
+margin-right: 40px;
+}
+#radio1:checked~ .nav_auto .auto-btn1{
+background: #eb595f;
+}
+#radio2:checked~ .nav_auto .auto-btn2{
+background: #eb595f;
+}
+#radio3:checked~ .nav_auto .auto-btn3{
+background: #eb595f;
+}
+#radio4:checked~ .nav_auto .auto-btn4{
+background: #eb595f;
+}
+#radio5:checked~ .nav_auto .auto-btn5{
+background: #eb595f;
+}
+#radio6:checked~ .nav_auto .auto-btn6{
+background: #eb595f;
+}
+.final-cta {
+    position: relative;
+    height: 400px;
+    padding: 80px 60px;
+    text-align: center;
+    background: url("../images/bk.jpg") center/cover no-repeat;
+}
+
+/* Light overlay so text is visible */
+.final-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.65);
+    z-index: 1;
+}
+
+/* Heading text */
+.final-cta h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #000;
+    position: relative;
+    z-index: 2;
+}
+
+/* Button */
+.final-cta .btn {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Dark button style */
+/* ================= GET STARTED BUTTON ================= */
+
+.final-cta .btn.dark {
+    background: #fff;                 /* white background */
+    color: #000;                      /* black text */
+    border: 2px solid #eb595f;        /* red border */
+    padding: 14px 36px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 40px;              /* pill shape */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.final-cta .btn.dark:hover {
+    background: #eb595f;              /* red fill */
+    color: #fff;                      /* white text */
+}
+
+.footer {
+    background: #000;
+    color: #ccc;
+    margin-top: 80px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    position: relative;
+}
+
+.footer-col h4 {
+    color: #fff;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Links (fix blue/purple issue) */
+.footer-col a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+/* Brand logo */
+.logo {
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Social icons */
+.social-icons {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+
+/* Bottom bar */
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #222;
+    font-size: 13px;
+    color: #aaa;
+}

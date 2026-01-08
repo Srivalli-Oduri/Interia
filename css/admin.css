@@ -1,0 +1,190 @@
+/* Interia Admin Theme */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../images/design-background.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Header */
+.admin-header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-header h1 {
+    font-size: 24px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.admin-header a {
+    color: #eb595f;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.admin-header a:hover {
+    color: #fff;
+}
+
+/* Layout */
+.admin-container {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Left Side: Quotes Table */
+.quotes-section {
+    flex: 2;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quotes-section h2 {
+    margin-top: 0;
+    font-size: 22px;
+    border-bottom: 2px solid #eb595f;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+tr:hover {
+    background-color: #fcfcfc;
+}
+
+/* Status Badges */
+.status-Pending {
+    color: #eb595f;
+    /* Red */
+    font-weight: bold;
+    background: #ffe6e6;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.status-Assigned {
+    color: #2e7d32;
+    /* Green */
+    font-weight: bold;
+    background: #e8f5e9;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Action Form */
+.assign-form {
+    display: flex;
+    gap: 10px;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.btn-assign {
+    background-color: #eb595f;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-assign:hover {
+    background-color: #d43f45;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Right Side: Add Designer */
+.designer-section {
+    flex: 1;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.designer-section h3 {
+    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.designer-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Fix padding issue */
+}
+
+.designer-form input:focus {
+    border-color: #eb595f;
+    outline: none;
+}
+
+.btn-add {
+    width: 100%;
+    background-color: #000;
+    color: #eb595f;
+    padding: 12px;
+    border: 1px solid #eb595f;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #eb595f;
+    color: #fff;
+}

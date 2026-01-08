@@ -1,0 +1,160 @@
+/* Interia Tracking Theme */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/book-background.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.track-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Border top accent */
+.track-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #eb595f;
+}
+
+h2 {
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+p.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Form Styles */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #eb595f;
+    outline: none;
+}
+
+.btn-track {
+    width: 100%;
+    padding: 12px;
+    background-color: #eb595f;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-track:hover {
+    background-color: #d43f45;
+}
+
+/* Result Card */
+.result-card {
+    margin-top: 30px;
+    text-align: left;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 4px solid #eb595f;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-card p {
+    margin: 8px 0;
+    color: #444;
+    font-size: 14px;
+}
+
+.result-card strong {
+    color: #000;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-Assigned {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-Pending {
+    background: #ffe6e6;
+    color: #eb595f;
+}
+
+/* Designer Info */
+.designer-info {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #ddd;
+}
+
+.designer-info h4 {
+    margin: 0 0 10px;
+    color: #eb595f;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Back Link */
+.back-link {
+    display: block;
+    margin-top: 25px;
+    color: #888;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #eb595f;
+}

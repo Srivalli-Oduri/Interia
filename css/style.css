@@ -1,0 +1,513 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)),
+    url("../images/home-background.jpg") center/cover no-repeat;
+    color: #fff;
+    position: relative;
+    
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+
+.logo-box img {
+    height: 32px;        /* exact visual size */
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color:#fff;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+/* Hero Content */
+.hero-content {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    
+}
+
+.hero-content p {
+    font-size: 20px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    
+}
+
+/* Buttons */
+/* ================= HERO BUTTONS ================= */
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-btn {
+    padding: 12px 30px;
+    border: 2px solid #fff;     /* white outline */
+    color: #fff;                /* white text */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 30px;        /* pill shape */
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.hero-btn:hover {
+    background: #6bb6e8;
+    color: #000;
+}
+
+
+/* WHY CHOOSE US */
+.why-choose {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.why-choose h2 {
+    font-size: 28px;
+    margin-bottom: 50px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.feature img {
+    width: 90px;
+    margin-bottom: 10px;
+
+}
+
+.feature p {
+    font-size: 30px;
+    color: #333;
+    font-weight: bolder;
+}
+
+/* ONE STOP SHOP */
+.one-stop {
+    padding: 80px 60px;
+}
+
+.one-stop h2 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 60px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.card {
+    width: 45%;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    margin: 20px 0;
+
+}
+
+.card p {
+    font-size: 20px;
+    color:black;
+    margin-bottom: 10px;
+}
+
+.card a {
+    text-decoration: none;
+    color: #ef4b4b;
+    font-size: 16px;
+}
+
+/* SAFETY SECTION */
+.safety {
+    display: flex;
+    align-items: center;
+    padding: 80px 60px;
+    gap: 60px;
+}
+
+.safety-text {
+    width: 50%;
+}
+
+.safety-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.safety-text p {
+    font-size: 20px;
+    color:black;
+    margin-bottom: 15px;
+}
+
+.safety-text a {
+    text-decoration: none;
+    color: #f05252;
+}
+
+.safety-image {
+    width: 50%;
+}
+
+.safety-image img {
+    width: 100%;
+    height: auto;
+}
+/* OUR ACHIEVEMENTS */
+.achievements {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.achievements h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.achievements-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.achievement img {
+    width: 90px;
+    margin-bottom: 10px;
+}
+
+.achievement p {
+    font-size: 30px;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    padding: 80px 60px;
+    text-align: center;
+    background: #fafafa;
+}
+
+.testimonials h2 {
+    font-size: 28px;
+}
+
+.testimonials .sub {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 50px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.testimonial {
+    background: #fff;
+    padding: 25px;
+    width: 30%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.testimonial img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.testimonial p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.testimonial h4 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.testimonial span {
+    font-size: 12px;
+    color: #777;
+}
+
+/* STEPS */
+/* STEPS SECTION */
+.steps {
+    padding: 90px 60px;
+    text-align: center;
+    background: #fff;
+}
+
+.steps h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+/* Step numbers */
+.step-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.step-numbers .step {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid #d1a48c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.step-numbers .step.active {
+    background: rgb(236, 74, 74);
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Content animation */
+.step-content {
+    animation: fadeUp 0.6s ease;
+}
+
+.steps h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.steps p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Image */
+.steps-image img {
+    width: 650px;
+    max-width: 100%;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.steps-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.steps-image img {
+    transition: opacity 0.3s ease, transform 0.4s ease;
+}
+.final-cta {
+    position: relative;
+    height: 400px;
+    padding: 80px 60px;
+    text-align: center;
+    background: url("../images/bk.jpg") center/cover no-repeat;
+}
+
+/* Light overlay so text is visible */
+.final-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.65);
+    z-index: 1;
+}
+
+/* Heading text */
+.final-cta h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #000;
+    position: relative;
+    z-index: 2;
+}
+
+/* Button */
+.final-cta .btn {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Dark button style */
+/* ================= GET STARTED BUTTON ================= */
+
+.final-cta .btn.dark {
+    background: #fff;                 /* white background */
+    color: #000;                      /* black text */
+    border: 2px solid #eb595f;        /* red border */
+    padding: 14px 36px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 40px;              /* pill shape */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.final-cta .btn.dark:hover {
+    background: #eb595f;              /* red fill */
+    color: #fff;                      /* white text */
+}
+
+.step-numbers .step {
+    transition: background 0.4s ease, transform 0.4s ease, color 0.4s ease;
+}
+
+.step-numbers .step.active {
+    background: rgb(236, 74, 74);
+    color: #fff;
+    transform: scale(1.15);
+}
+.footer {
+    background: #000;
+    color: #ccc;
+    margin-top: 80px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    position: relative;
+}
+
+.footer-col h4 {
+    color: #fff;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Links (fix blue/purple issue) */
+.footer-col a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+/* Brand logo */
+.logo {
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Social icons */
+.social-icons {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+
+/* Bottom bar */
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #222;
+    font-size: 13px;
+    color: #aaa;
+}
