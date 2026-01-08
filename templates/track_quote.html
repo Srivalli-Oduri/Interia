@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Track Your Quote - Interia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/track.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="track-container">
+        <h2>Track Your Status</h2>
+        <p class="subtitle">Enter your registered mobile number below.</p>
+
+        <form method="POST">
+            <input type="text" name="mobile" placeholder="Mobile Number" required>
+            <button type="submit" class="btn-track">CHECK STATUS</button>
+        </form>
+
+        {% if quote %}
+        <div class="result-card">
+            <p><strong>Hi {{ quote.customer_name }},</strong></p>
+            <p>Your request for a <strong>{{ quote.service }}</strong> design is currently:</p>
+            <div style="margin: 10px 0;">
+                <span class="status-badge status-{{ quote.status }}">{{ quote.status }}</span>
+            </div>
+
+            {% if quote.designer %}
+            <div class="designer-info">
+                <h4>Assigned Designer</h4>
+                <p><i class="fas fa-user-tie"></i> &nbsp; {{ quote.designer.name }}</p>
+                <p><i class="fas fa-phone"></i> &nbsp; {{ quote.designer.mobile }}</p>
+                <p><i class="fas fa-envelope"></i> &nbsp; {{ quote.designer.email }}</p>
+            </div>
+            {% else %}
+            <p style="font-size:12px; color:#888; margin-top:10px;">
+                <i class="fas fa-clock"></i> We are currently reviewing your request. A designer will be assigned
+                shortly.
+            </p>
+            {% endif %}
+        </div>
+        {% elif request.method == 'POST' %}
+        <div class="result-card" style="border-left-color: #888;">
+            <p style="color: #d32f2f;"><i class="fas fa-exclamation-circle"></i> No quote found for this number.</p>
+        </div>
+        {% endif %}
+
+        <a href="{{ url_for('home') }}" class="back-link">← Back to Home</a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login - Interia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/track.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="track-container" style="max-width: 400px;">
+        <h2><i class="fas fa-user-lock"></i> Admin Login</h2>
+        <p class="subtitle">Secure access for administrators only.</p>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div
+            style="background: #ffe6e6; color: #d32f2f; padding: 10px; border-radius: 4px; margin-bottom: 15px; text-align: left; font-size: 14px;">
+            <i class="fas fa-exclamation-triangle"></i> {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password"
+                style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 20px; box-sizing: border-box; font-size: 16px;"
+                required>
+            <button type="submit" class="btn-track">LOGIN</button>
+        </form>
+
+        <a href="{{ url_for('home') }}" class="back-link">← Back to Website</a>
+    </div>
+
+</body>
+
+</html>

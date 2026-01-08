@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up | Interia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+</head>
+
+<body>
+
+<div class="signup-card">
+    <h2>Create your account in Interia</h2>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div style="color:#eb595f; margin-bottom:15px; font-size:14px;">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Backend Signup Form -->
+    <form method="POST" action="{{ url_for('signup') }}">
+
+        <!-- Email -->
+        <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+        >
+
+        <!-- Password -->
+        <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+        >
+
+        <!-- Confirm Password (frontend check only) -->
+        <input
+            type="password"
+            placeholder="Confirm Password"
+            required
+            oninput="this.setCustomValidity(
+                this.value !== document.querySelector('input[name=password]').value
+                ? 'Passwords do not match'
+                : ''
+            )"
+        >
+
+        <button type="submit">SIGN UP</button>
+
+        <p class="login-text">
+            Already have an account?
+            <a href="{{ url_for('login') }}">Login</a>
+        </p>
+    </form>
+</div>
+
+</body>
+</html>

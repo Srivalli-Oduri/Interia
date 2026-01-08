@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard - Interia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="admin-header">
+        <h1>Interia Admin</h1>
+        <div>
+            <a href="{{ url_for('home') }}" style="margin-right: 15px;">Website</a>
+            <a href="{{ url_for('logout') }}"
+                style="background: #eb595f; padding: 5px 10px; border-radius: 4px; color: white;">
+                Logout
+            </a>
+        </div>
+    </header>
+
+    <!-- ================= QUOTES SECTION ================= -->
+    <div class="admin-container">
+
+        <div class="quotes-section">
+            <h2>Customer Quotes</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Customer</th>
+                        <th>Mobile</th>
+                        <th>Service</th>
+                        <th>Status</th>
+                        <th>Assigned Designer</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for quote in quotes %}
+                    <tr>
+                        <td>#{{ quote.id }}</td>
+
+                        <td>
+                            <strong>{{ quote.customer_name }}</strong><br>
+                            <span style="font-size:12px;color:#777;">{{ quote.email }}</span>
+                        </td>
+
+                        <td>{{ quote.mobile }}</td>
+                        <td>{{ quote.service }}</td>
+
+                        <td>
+                            <span class="status-{{ quote.status }}">{{ quote.status }}</span>
+                        </td>
+
+                        <td>
+                            {% if quote.designer %}
+                                {{ quote.designer.name }}
+                            {% else %}
+                                <span style="color:#aaa;">Unassigned</span>
+                            {% endif %}
+                        </td>
+
+                        <td>
+                            {% if quote.status == 'Pending' %}
+                                <form action="{{ url_for('assign_designer', quote_id=quote.id) }}"
+                                      method="POST"
+                                      class="assign-form">
+                                    <select name="designer_id" required>
+                                        <option value="">Choose Designer...</option>
+                                        {% for designer in designers %}
+                                        <option value="{{ designer.id }}">
+                                            {{ designer.name }} - {{ designer.specialty }}
+                                        </option>
+                                        {% endfor %}
+                                    </select>
+                                    <button type="submit" class="btn-assign">Assign</button>
+                                </form>
+                            {% else %}
+                                <button disabled class="btn-assign"
+                                        style="background:#ddd;color:#888;">
+                                    Done
+                                </button>
+                            {% endif %}
+
+                            <!-- DELETE QUOTE -->
+                            <form action="{{ url_for('delete_quote', quote_id=quote.id) }}"
+                                  method="POST"
+                                  onsubmit="return confirm('Delete this quote?');"
+                                  style="margin-top:6px;">
+                                <button class="btn-assign" style="background:#000;">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ================= ADD DESIGNER ================= -->
+        <div class="designer-section">
+            <h3>Add New Designer</h3>
+
+            <form action="{{ url_for('add_designer') }}" method="POST" class="designer-form">
+                <label>Name</label>
+                <input type="text" name="name" required>
+
+                <label>Email</label>
+                <input type="email" name="email" required>
+
+                <label>Mobile</label>
+                <input type="text" name="mobile" required>
+
+                <label>Specialty</label>
+                <input type="text" name="specialty" required>
+
+                <button type="submit" class="btn-add">ADD DESIGNER</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- ================= USER MANAGEMENT ================= -->
+    <div class="admin-container" style="margin-top:40px;">
+
+        <div class="quotes-section">
+            <h2>User Management</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Email / Name</th>
+                        <th>Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- CUSTOMERS -->
+                    {% for user in users %}
+                    <tr>
+                        <td>#{{ user.id }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>
+                            <span class="status-Pending">Customer</span>
+                        </td>
+                        <td>
+                            <form action="{{ url_for('delete_customer', user_id=user.id) }}"
+                                  method="POST"
+                                  onsubmit="return confirm('Delete this customer?');">
+                                <button class="btn-assign">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+
+                    <!-- DESIGNERS -->
+                    {% for designer in designers %}
+                    <tr>
+                        <td>#{{ designer.id }}</td>
+                        <td>
+                            <strong>{{ designer.name }}</strong><br>
+                            <span style="font-size:12px;color:#777;">{{ designer.email }}</span>
+                        </td>
+                        <td>
+                            <span class="status-Assigned">Designer</span>
+                        </td>
+                        <td>
+                            <form action="{{ url_for('delete_designer', designer_id=designer.id) }}"
+                                  method="POST"
+                                  onsubmit="return confirm('Delete this designer?');">
+                                <button class="btn-assign" style="background:#000;">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- ================= ACTIVITY LOG ================= -->
+    <div class="admin-container" style="margin-top:40px;">
+
+        <div class="quotes-section">
+            <h2>Activity Log</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Action</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for log in logs %}
+                    <tr>
+                        <td>{{ log.id }}</td>
+                        <td>{{ log.action }}</td>
+                        <td>{{ log.timestamp.strftime('%d %b %Y, %I:%M %p') }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>

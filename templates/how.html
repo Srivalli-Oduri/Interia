@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interia – How It Works</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/how.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- HERO SECTION -->
+<header class="hero">
+    <nav class="navbar">
+        <div class="logo-box">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Interia Logo">
+    </div>
+        
+        <ul class="nav-links">
+             <li><a href="{{ url_for('home') }}">HOME</a></li>
+            <li><a href="{{ url_for('book') }}">GET QUOTE</a></li>
+            <li><a href="{{ url_for('design') }}">DESIGN IDEAS</a></li>
+            <li><a href="{{ url_for('how') }}">HOW IT WORKS?</a></li>
+            <li><a href="{{ url_for('visit') }}">VISIT US</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-content">
+        <h1>We make home interiors a breeze!</h1>
+    </div>
+</header>
+
+<!-- STEPS HEADER -->
+<section class="steps-section">
+    <h2>Your dream home in 5 simple steps!</h2>
+    <p>Looking to design your home interiors? Here's how you can get started.</p>
+</section>
+
+<!-- PROCESS SECTION -->
+<section class="process-section">
+
+    <!-- STEP 1 -->
+    <div class="process-row">
+        <div class="process-image">
+            <img src="{{ url_for('static', filename='images/how-m1-1.jpg') }}" alt="Meet Designer">
+        </div>
+
+        <div class="process-text">
+            <h2>Meet your designer</h2>
+            <p><strong>It all begins with a form</strong><br>
+                Let’s get acquainted. The more we learn about you, the better we can design your home.
+            </p>
+
+            <a href="{{ url_for('book') }}" class="form-btn">Fill Your Form</a>
+
+            <p class="consult">
+                <strong>Get free consultation</strong><br>
+                Talk to your designer and get personalised designs and quote for your dream home.
+            </p>
+        </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="process-row reverse">
+        <div class="process-text">
+            <h2>Book at Interia</h2>
+            <ul>
+                <li>
+                    <strong>Pay the booking amount to seal the deal</strong><br>
+                    Pay 5% of the final quote or ₹25,000 (whichever is higher) to book us.
+                </li>
+                <li>
+                    <strong>Finalise your home design</strong><br>
+                    It's time to deep dive into the nitty-gritties.Pick your favourite materials and finishes.
+                </li>
+            </ul>
+        </div>
+
+        <div class="process-image">
+            <img src="{{ url_for('static', filename='images/how-m1-2.jpg') }}" alt="Book at Interia">
+        </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="process-row">
+        <div class="process-image">
+            <img src="{{ url_for('static', filename='images/how-m1-3.jpg') }}" alt="Place Order">
+        </div>
+
+        <div class="process-text">
+            <h2>Place the order</h2>
+            <ul>
+                <li>
+                    <strong>Start the order process with 50% payment</strong><br>
+                    Finalise the design and your project is now off to a good start.
+                </li>
+                <li>
+                    <strong>Work commences</strong><br>
+                    Civil work begins on site.Keep a tab on your project status on 'My Account'
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</section>
+
+<!-- HALFWAY -->
+<section class="halfway-section">
+    <div class="halfway-banner">
+        <h2>You’re halfway there.Your Orders are raised!</h2>
+    </div>
+</section>
+
+<!-- STEP 4 -->
+<section class="process-section">
+    <div class="process-row">
+        <div class="process-image">
+            <img src="{{ url_for('static', filename='images/how-m1-4.jpg') }}" alt="Execution">
+        </div>
+
+        <div class="process-text">
+            <h2>Execution and installation</h2>
+            <ul>
+                <li>
+                    <strong>Pay 100% at execution</strong><br>
+                    Manufacturing of orders in process and you're mid-way through your project.
+                </li>
+                <li>
+                    <strong>Installation</strong><br>
+                    Orders get delivered onsite and installation happens as per design.
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- MOVE IN -->
+<section class="move-in-section">
+    <div class="move-in-banner">
+        <span class="check-icon">✔</span>
+        <h2>Hurrah! Home is ready to move in!</h2>
+    </div>
+
+    <div class="move-in-content">
+        <div class="move-in-image">
+            <img src="{{ url_for('static', filename='images/how-m1-5.jpg') }}" alt="Move In">
+        </div>
+
+        <div class="move-in-text">
+            <h3>Move in!</h3>
+            <p>Your dream home is now a reality.It's time to make new memories!Do avail the free professional photoshoot session of your #Livespacehome.</p>
+        </div>
+    </div>
+</section>
+<!-- TEAM SECTION -->
+<section class="m6">
+
+    <div class="t6">
+        <h1>The Team</h1>
+        <p>Get to know the team that'll be with you every step of the way.</p>
+    </div>
+
+    <div class="d6">
+        <div class="team-card">
+            <img src="{{ url_for('static', filename='images/how-m6-1.png') }}" alt="Design Lead">
+            <h2>The Design Lead (DL)</h2>
+            <p>
+                The Design Lead gets to know your requirements and your lifestyle
+                intimately to ensure your home is a reflection of who you are.
+            </p>
+        </div>
+
+        <div class="team-card">
+            <img src="{{ url_for('static', filename='images/how-m6-2.png') }}" alt="Business Manager">
+            <h2>The Business Manager (BM)</h2>
+            <p>
+                To ensure your home journey is smooth sailing, your Business
+                Manager oversees the entire design process and ensures there
+                are no hiccups.
+            </p>
+        </div>
+
+        <div class="team-card">
+            <img src="{{ url_for('static', filename='images/how-m6-3.png') }}" alt="Project Manager">
+            <h2>The Project Manager (PM)</h2>
+            <p>
+                Your Project Manager steers the on-site execution. They make it
+                their life's mission to get your home ready in time.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+</section>
+  <section class="final-cta">
+    <h2>Your dream home is just a click away</h2>
+
+    <a href="{{ url_for('book') }}" class="btn dark">GET STARTED</a>
+</section>
+ <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col brand">
+            <h2 class="logo">Interia</h2>
+        </div>
+
+        <div class="footer-col">
+            <h4>Design ideas</h4>
+                    <ul>
+                        <li><a href="{{ url_for('show', topic='living-room') }}">Living Rooms</a></li>
+                        <li><a href="{{ url_for('show', topic='kitchen') }}">Kitchens</a></li>
+                        <li><a href="{{ url_for('show', topic='master-bedroom') }}">Master Bedrooms</a></li>
+                        <li><a href="{{ url_for('show', topic='kids-bedroom') }}">Kids Bedrooms</a></li>
+                    </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Locations</h4>
+                    <ul>
+                        <li><a href="https://www.google.com/maps/place/Amalapuram" target="_blank">Amalapuram</a></li>
+                        <li><a href="https://www.google.com/maps/place/Ambajipeta" target="_blank">Ambajipeta</a></li>
+                        <li><a href="https://www.google.com/maps/place/Hyderabad" target="_blank">Hyderabad</a></li>
+                        <li><a href="https://www.google.com/maps/place/Bengaluru" target="_blank">Bengaluru</a></li>
+                    </ul>
+                </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+           
+                    <ul>
+                        <li><a href="{{ url_for('show', topic='living-room') }}">Living Rooms</a></li>
+                        <li><a href="{{ url_for('show', topic='kitchen') }}">Kitchens</a></li>
+                        <li><a href="{{ url_for('show', topic='master-bedroom') }}">Master Bedrooms</a></li>
+                        <li><a href="{{ url_for('show', topic='kids-bedroom') }}">Kids Bedrooms</a></li>
+                    </ul>
+        </div>
+
+        <div class="footer-col">
+    <h4>Get in touch</h4>
+    <ul>
+        <li>Call us</li>
+        <li><a href="tel:1234567891">+91 1234567891</a></li>
+        <li>Email us</li>
+        <li><a href="mailto:interia@gmail.com">interia@gmail.com</a></li>
+    </ul>
+</div>
+    
+        <div class="social-icons">
+    <a href="https://wa.me/918879109025" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/interia_pro/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+
+
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 Interia.com | All Rights Reserved
+    </div>
+</footer>
+
+
+</body>
+</html>
+
+

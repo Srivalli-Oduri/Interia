@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Interia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+
+<body>
+
+<div class="login-card">
+    <h2>Welcome to Interia</h2>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div style="color: #eb595f; margin-bottom: 15px; font-size: 14px;">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Unified Login Form -->
+    <form method="POST" action="{{ url_for('login') }}">
+
+        <!-- Email for customers | Username for admin -->
+        <input
+            type="text"
+            name="email_or_username"
+            placeholder="Email or Username"
+            required
+        >
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+        >
+
+        <button type="submit">LOGIN</button>
+
+        <p class="signup-text">
+            Don’t have an account?
+            <a href="{{ url_for('signup') }}">Sign up</a>
+        </p>
+    </form>
+</div>
+
+</body>
+</html>

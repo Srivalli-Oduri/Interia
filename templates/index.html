@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interior Design</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header class="hero">
+    <nav class="navbar">
+        <div class="logo-box">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Interia Logo">
+        </div>
+
+        <!-- ✅ FIXED: ROLE-AWARE NAVBAR -->
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">HOME</a></li>
+
+            {% if session.admin_logged_in %}
+                <li><a href="{{ url_for('admin_dashboard') }}">DASHBOARD</a></li>
+                <li><a href="{{ url_for('logout') }}">LOGOUT</a></li>
+
+            {% elif session.user_logged_in %}
+                <li><a href="{{ url_for('book') }}">GET QUOTE</a></li>
+                <li><a href="{{ url_for('logout') }}">LOGOUT</a></li>
+
+            {% else %}
+                <li><a href="{{ url_for('signup') }}">SIGNUP</a></li>
+                <li><a href="{{ url_for('login') }}">LOGIN</a></li>
+            {% endif %}
+
+            <li><a href="{{ url_for('design') }}">DESIGN IDEAS</a></li>
+            <li><a href="{{ url_for('how') }}">HOW IT WORKS</a></li>
+            <li><a href="{{ url_for('visit') }}">VISIT US</a></li>
+            <li><a href="{{ url_for('track_quote') }}">TRACK STATUS</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-content">
+        <h1>DESIGN YOUR DREAM</h1>
+        <p>
+            Whether it's a magazine-like dream kitchen or your entire home,
+            enjoy end-to-end solutions from design to installation.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="{{ url_for('book') }}" class="hero-btn">GET QUOTE</a>
+            <a href="{{ url_for('design') }}" class="hero-btn">DESIGN IDEAS</a>
+        </div>
+    </div>
+</header>
+
+<!-- WHY CHOOSE US -->
+<section class="why-choose">
+    <h2>Why choose us?</h2>
+
+    <div class="features">
+        <div class="feature">
+            <img src="{{ url_for('static', filename='images/icons/icon1.png') }}">
+            <p>Best price<br>Guarantee</p>
+        </div>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='images/icons/icon2.png') }}">
+            <p>45 day move-in<br>Guarantee</p>
+        </div>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='images/icons/icon3.png') }}">
+            <p>10 years<br>Warranty</p>
+        </div>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='images/icons/icon4.png') }}">
+            <p>146 quality<br>Checks</p>
+        </div>
+    </div>
+</section>
+
+<!-- ONE STOP SHOP -->
+<section class="one-stop">
+    <h2>One-stop shop for all things home interiors</h2>
+
+    <div class="cards">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/home-m2-1.jpg') }}">
+            <h3>Living Room</h3>
+            <p>
+                Get the complete home interior experience with award-winning
+                designers, service partners, and the best brands.
+            </p>
+            <a href="{{ url_for('show', topic='living-room') }}">Let’s tell you more →</a>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/home-m2-2.jpg') }}">
+            <h3>Kitchen</h3>
+            <p>
+                Choose high quality, budget-friendly modular solutions like
+                kitchens, wardrobes, TVs, units, and more.
+            </p>
+            <a href="{{ url_for('how', topic='kitchen') }}">Let’s tell you more →</a>
+        </div>
+    </div>
+</section>
+
+<!-- SAFETY SECTION -->
+<section class="safety">
+    <div class="safety-text">
+        <h2>Designs Your Kids Will Love</h2>
+        <p>
+            Bright, safe, and imaginative bedroom designs tailored for children —
+            built for play, learning, and peaceful sleep.
+        </p>
+        <a href="{{ url_for('show', topic='kids-bedroom') }}">Let’s tell you more →</a>
+    </div>
+
+    <div class="safety-image">
+        <img src="{{ url_for('static', filename='images/safe.jpg') }}">
+    </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="achievements">
+    <h2>Our Achievements</h2>
+
+    <div class="achievements-list">
+        <div class="achievement">
+            <img src="{{ url_for('static', filename='images/icons/home-i-5.png') }}">
+            <p>2 homes<br>Delivered every hour</p>
+        </div>
+        <div class="achievement">
+            <img src="{{ url_for('static', filename='images/icons/home-i-6.png') }}">
+            <p>500+ expert<br>Designers</p>
+        </div>
+        <div class="achievement">
+            <img src="{{ url_for('static', filename='images/icons/home-i-7.png') }}">
+            <p>25 lakh+<br>Catalog products</p>
+        </div>
+        <div class="achievement">
+            <img src="{{ url_for('static', filename='images/icons/home-i-8.png') }}">
+            <p>40 cities & 2<br>Countries</p>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+    <h2>We'll let our clients do the talking</h2>
+    <p class="sub">Here's what they have to say</p>
+
+    <div class="testimonial-cards">
+        <div class="testimonial">
+            <p>"The team was professional and completed everything on time."</p>
+            <h4>Rahul & Shweta</h4>
+            <span>Bangalore</span>
+        </div>
+        <div class="testimonial">
+            <p>"Amazing designs and smooth execution."</p>
+            <h4>Sameer & Ananya</h4>
+            <span>Hyderabad</span>
+        </div>
+        <div class="testimonial">
+            <p>"Best decision we made."</p>
+            <h4>Priya</h4>
+            <span>Chennai</span>
+        </div>
+    </div>
+</section>
+
+<!-- STEPS -->
+<section class="steps">
+    <h2>Design Home In Just 5 Simple Steps</h2>
+
+    <div class="step-numbers">
+        <span class="step active">1</span>
+        <span class="step">2</span>
+        <span class="step">3</span>
+        <span class="step">4</span>
+        <span class="step">5</span>
+    </div>
+
+    <div class="step-content">
+        <h3>Installation begins</h3>
+        <p>Pay 100% before delivery and watch your home come alive</p>
+
+        <div class="steps-image">
+            <img src="{{ url_for('static', filename='images/how-m1-1.jpg') }}">
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+    <h2>Your dream home is just a click away</h2>
+    <a href="{{ url_for('book') }}" class="btn dark">GET STARTED</a>
+</section>
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col brand">
+            <h2 class="logo">Interia</h2>
+        </div>
+
+        <div class="footer-col">
+            <h4>Design ideas</h4>
+                    <ul>
+                        <li><a href="{{ url_for('show', topic='living-room') }}">Living Rooms</a></li>
+                        <li><a href="{{ url_for('show', topic='kitchen') }}">Kitchens</a></li>
+                        <li><a href="{{ url_for('show', topic='master-bedroom') }}">Master Bedrooms</a></li>
+                        <li><a href="{{ url_for('show', topic='kids-bedroom') }}">Kids Bedrooms</a></li>
+                    </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Locations</h4>
+                    <ul>
+                        <li><a href="https://www.google.com/maps/place/Amalapuram" target="_blank">Amalapuram</a></li>
+                        <li><a href="https://www.google.com/maps/place/Ambajipeta" target="_blank">Ambajipeta</a></li>
+                        <li><a href="https://www.google.com/maps/place/Hyderabad" target="_blank">Hyderabad</a></li>
+                        <li><a href="https://www.google.com/maps/place/Bengaluru" target="_blank">Bengaluru</a></li>
+                    </ul>
+                </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+           
+                    <ul>
+                        <li><a href="{{ url_for('show', topic='living-room') }}">Living Rooms</a></li>
+                        <li><a href="{{ url_for('show', topic='kitchen') }}">Kitchens</a></li>
+                        <li><a href="{{ url_for('show', topic='master-bedroom') }}">Master Bedrooms</a></li>
+                        <li><a href="{{ url_for('show', topic='kids-bedroom') }}">Kids Bedrooms</a></li>
+                    </ul>
+        </div>
+
+        <div class="footer-col">
+    <h4>Get in touch</h4>
+    <ul>
+        <li>Call us</li>
+        <li><a href="tel:1234567891">+91 1234567891</a></li>
+        <li>Email us</li>
+        <li><a href="mailto:interia@gmail.com">interia@gmail.com</a></li>
+    </ul>
+</div>
+    
+        <div class="social-icons">
+    <a href="https://wa.me/918879109025" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/interia_pro/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+
+
+        </div>
+    </div>
+
+<footer class="footer">
+    <div class="footer-bottom">
+        © 2025 Interia.com | All Rights Reserved
+    </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/steps.js') }}"></script>
+
+</body>
+</html>

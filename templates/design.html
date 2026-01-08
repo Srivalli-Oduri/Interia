@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interior Design</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="hero">
+    <nav class="navbar">
+           <div class="logo-box">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Interia Logo">
+    </div>
+        <ul class="nav-links">
+             <li><a href="{{ url_for('home') }}">HOME</a></li>
+            <li><a href="{{ url_for('book') }}">GET QUOTE</a></li>
+            <li><a href="{{ url_for('design') }}">DESIGN IDEAS</a></li>
+            <li><a href="{{ url_for('how') }}">HOW IT WORKS</a></li>
+            <li><a href="{{ url_for('visit') }}">VISIT US</a></li>
+        </ul>
+    </nav>
+</header>
+ <div class="hero-content">
+        <h1>DESIGN IT</h1>
+        
+ </div>
+  <div class="m1">
+        <div class="t1">
+            <p>Check out how your dream home can look like. Get inspiration from Interia's vast design catalog spanning across modular kitchens, living rooms, bedrooms, modular wardrobes and more...</p>
+        </div>
+   
+    </section>
+    <div class="d1">
+            <div onclick="window.location.href=`{{ url_for('show', topic='living-room') }}`;">
+                <img src="{{ url_for('static', filename='images/design-m1-1.jpg') }}">
+                <h2>Living Room</h2>
+            </div>
+            <div onclick="window.location.href=`{{ url_for('show', topic='kitchen') }}`;">
+                <img src="{{ url_for('static', filename='images/design-m1-2.png') }}">
+                <h2>Kitchen</h2>
+            </div>
+        </div>
+        <div class="d1">
+            <div onclick="window.location.href=`{{ url_for('show', topic='master-bedroom') }}`;">
+                <img src="{{ url_for('static', filename='images/design-m1-3.jpg') }}">
+                <h2>Master Bedroom</h2>
+            </div>
+            <div onclick="window.location.href=`{{ url_for('show', topic='dining-room') }}`;">
+                <img src="{{ url_for('static', filename='images/design-m1-4.png') }}">
+                <h2>Dining Room</h2>
+            </div>
+        </div>
+        <div class="d1">
+            <div onclick="window.location.href=`{{ url_for('show', topic='kids-bedroom') }}`;">
+                <img src="{{ url_for('static', filename='images/design-m1-5.jpg') }}">
+                <h2>Kids Bedroom</h2>
+            </div>
+            <div onclick="window.location.href=`{{ url_for('show', topic='bathroom') }}`;">
+                <img src="{{ url_for('static', filename='images/design-m1-6.png') }}">
+                <h2>Bathroom</h2>
+            </div>
+        </div>
+        <div class="d1">
+            <div onclick="window.location.href=`{{ url_for('show', topic='wardrobe') }}`;">
+                <img src="{{ url_for('static', filename='images/design-m1-7.png') }}">
+                <h2>Wardrobe</h2>
+            </div>
+            <div onclick="window.location.href=`{{ url_for('show', topic='pooja-room') }}`;">
+                <img src="{{ url_for('static', filename='images/design-m1-8.png') }}">
+                <h2>Pooja Room</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="m2">
+        <div class="d2">
+            <div>
+                <h2>See. Touch. Experience.</h2>
+                <p>Come to our Experience Centre and get a look and feel of what we do!</p>
+                <a href="{{ url_for('visit') }}"><p class="rd">Let's Meet →</p></a>
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='images/design-m2.jpg') }}">
+            </div>
+        </div>
+    </div>
+
+   
+
+<!-- SAFETY SECTION -->
+
+<section class="final-cta">
+    <h2>Your dream home is just a click away</h2>
+
+    <a href="{{ url_for('book') }}" class="btn dark">GET STARTED</a>
+</section>
+<script src="{{ url_for('static', filename='js/steps.js') }}"></script>
+ <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col brand">
+            <h2 class="logo">Interia</h2>
+        </div>
+
+        <div class="footer-col">
+            <h4>Design ideas</h4>
+                    <ul>
+                        <li><a href="{{ url_for('show', topic='living-room') }}">Living Rooms</a></li>
+                        <li><a href="{{ url_for('show', topic='kitchen') }}">Kitchens</a></li>
+                        <li><a href="{{ url_for('show', topic='master-bedroom') }}">Master Bedrooms</a></li>
+                        <li><a href="{{ url_for('show', topic='kids-bedroom') }}">Kids Bedrooms</a></li>
+                    </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Locations</h4>
+                    <ul>
+                        <li><a href="https://www.google.com/maps/place/Amalapuram" target="_blank">Amalapuram</a></li>
+                        <li><a href="https://www.google.com/maps/place/Ambajipeta" target="_blank">Ambajipeta</a></li>
+                        <li><a href="https://www.google.com/maps/place/Hyderabad" target="_blank">Hyderabad</a></li>
+                        <li><a href="https://www.google.com/maps/place/Bengaluru" target="_blank">Bengaluru</a></li>
+                    </ul>
+                </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+           
+                    <ul>
+                        <li><a href="{{ url_for('show', topic='living-room') }}">Living Rooms</a></li>
+                        <li><a href="{{ url_for('show', topic='kitchen') }}">Kitchens</a></li>
+                        <li><a href="{{ url_for('show', topic='master-bedroom') }}">Master Bedrooms</a></li>
+                        <li><a href="{{ url_for('show', topic='kids-bedroom') }}">Kids Bedrooms</a></li>
+                    </ul>
+        </div>
+
+        <div class="footer-col">
+    <h4>Get in touch</h4>
+    <ul>
+        <li>Call us</li>
+        <li><a href="tel:1234567891">+91 1234567891</a></li>
+        <li>Email us</li>
+        <li><a href="mailto:interia@gmail.com">interia@gmail.com</a></li>
+    </ul>
+</div>
+    
+        <div class="social-icons">
+    <a href="https://wa.me/918879109025" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/interia_pro/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+
+
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2025 Interia.com | All Rights Reserved
+    </div>
+</footer>
+
+
+
+
+   
+ <script>
+function btn(url) {
+    window.location.href = url;
+}
+</script>
+
+</body>
+</html>
+
